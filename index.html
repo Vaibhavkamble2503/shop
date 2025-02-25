@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhel Café | Authentic Street Food</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Bhel Café offers the best Mumbai street food, including Bhel Puri, Panipuri, and Cold Coffee.">
+    <meta property="og:title" content="Bhel Café | Authentic Street Food">
+    <meta property="og:image" content="your-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <style>
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.body { 
+    font-family: 'Poppins', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f8f9fa; 
+    color: #333; 
+    scroll-behavior: smooth; 
+    padding-top: 60px; /* Prevent navbar from overlapping content */
+}
+/* Improved Header */
+header {
+    background: #ffffff;
+    color: rgb(111, 57, 57);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+
+
+.hero {
+    background-image: url('./image/rtt\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #d84315;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #a93212;
+}
+
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between logo and text */
+}
+
+.logo {
+    width: 60px; /* Adjust size */
+    height: auto;
+}
+
+.cafe-name {
+    font-size: 28px;
+    font-weight: 600;
+    color: #d84315;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation Bar */
+.navbar {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #ff6600;
+    color: white;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background: white;
+    color: #d84315;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden by default on larger screens */
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Initially hidden on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 120px; /* Adjust this value to move the menu further down */
+        left: 0;
+        width: 100%; /* Full-width of the screen */
+        background: #ff6600; /* Orange background */
+        padding: 10px;
+        border-radius: 5px 5px 0 0; /* Rounded top corners */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: top 0.3s ease-in-out; /* Smooth sliding effect */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+        top: 120px; /* Adjusted to show the menu below the hamburger */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+}
+
+
+
+.about {
+    background-image: url('path-to-background-image.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures that the content stacks on smaller screens */
+    gap: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Teko', sans-serif;
+    color: #f4b400;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+
+
+
+
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;  /* Added more padding for mobile responsiveness */
+    background: #ff6600;
+    font-size: large;
+    border-radius: 10px;  /* Rounded corners for a smoother look */
+  /*  font-family: 'Teko', sans-serif;*/
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;  /* Ensures the items wrap on smaller screens */
+    margin-top: 20px;  /* Adds space between the title and features */
+}
+
+/* Individual Feature */
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* Smooth animation for hover effect */
+}
+
+.feature:hover {
+    transform: translateY(-5px);  /* Adds slight lift effect on hover */
+}
+
+/* Container for center alignment */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading Style */
+h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .why-choose-us {
+        padding: 40px 15px;  /* Adjust padding for smaller screens */
+    }
+
+    .features {
+        flex-direction: column;  /* Stack features vertically on smaller screens */
+        gap: 15px;
+    }
+
+    .feature {
+        width: 90%;  /* Make features take up most of the screen width on mobile */
+        margin: 0 auto;  /* Center feature cards */
+    }
+}
+
+
+/* Flip Card Menu */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+.menu-buttons {
+    margin-bottom: 20px;
+}
+
+.menu-buttons button {
+    background: #d84315;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.menu-buttons button:hover {
+    background: #a93212;
+}
+
+/* Flip Card Styles */
+.menu-card {
+    width: 280px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.menu-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.menu-card:hover .menu-card-inner {
+    transform: rotateY(180deg);
+    transition: transform 0.8s ease-in-out; /* Smooth animation */
+}
+
+.menu-card-front,
+.menu-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-card-front {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-card-front img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.menu-card-back {
+    background: #d84315;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Best Seller Badge */
+.best-seller {
+    background: gold;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust card size for small screens */
+    }
+
+    .menu-card {
+        width: 230px; /* Adjust card width on small screens */
+        height: 220px; /* Adjust card height */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller heading for smaller screens */
+    }
+}
+
+
+
+/* Popular Items Section */
+.popular-items {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.popular-items h2 {
+    font-size: 28px;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.item h3 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff5722;
+    margin-top: 10px;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .item {
+        width: 200px; /* Adjust item width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%; /* Full width for very small screens */
+        margin: 10px 0;
+    }
+}
+
+
+
+
+/* General Section Styling */
+.gallery, .testimonials, .contact {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;  /* Centers the sections */
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Image Gallery Section */
+.image-gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Gallery Item Styling */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show Overlay on Hover */
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts to 2 or 3 columns */
+    }
+
+    .gallery-item {
+        max-width: 90%; /* Ensures good spacing on smaller screens */
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts to 1-2 columns */
+    }
+
+    .gallery-item {
+        max-width: 100%; /* Stacks gallery items in a single column */
+    }
+}
+
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stacks items vertically */
+    }
+
+    .gallery-item {
+        max-width: 100%; /* Takes full width on very small screens */
+    }
+}
+
+
+
+/* Reviews Section */
+.reviews {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 40px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust padding for smaller screens */
+    .about, .gallery, .testimonials, .contact {
+        padding: 30px 15px;
+    }
+
+    /* Gallery image adjustments for mobile */
+    .gallery img {
+        width: 180px; /* Adjust width of images for smaller screens */
+        margin: 10px;
+    }
+
+    /* Reviews section adjustments */
+    .reviews {
+        padding: 30px 15px;
+    }
+}
+
+
+.review {
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    width: 60%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.customer-poll {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    box-sizing: border-box; /* Ensures padding does not affect the width */
+}
+
+.customer-poll h2 {
+    font-size: 24px;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.customer-poll p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.customer-poll label {
+    display: block;
+    font-size: 16px;
+    color: #444;
+    margin: 8px 0;
+    cursor: pointer;
+    text-align: left; /* Aligns text for better readability */
+}
+
+.customer-poll input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #ff5722;
+    transform: scale(1.2);
+}
+
+.customer-poll button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 15px;
+    width: 100%; /* Makes the button full width on smaller screens */
+}
+
+.customer-poll button:hover {
+    background: #e64a19;
+}
+
+@media (max-width: 768px) {
+    .customer-poll {
+        padding: 20px;
+        max-width: 90%; /* Makes it responsive on mobile */
+    }
+
+    .customer-poll h2 {
+        font-size: 22px; /* Adjusts the font size for smaller screens */
+    }
+
+    .customer-poll p {
+        font-size: 16px;
+    }
+
+    .customer-poll button {
+        font-size: 16px;
+    }
+}
+
+
+
+
+.event {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #d84315;
+}
+
+
+
+
+
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    font-size: 18px;
+    color: #333;
+}
+
+.popup button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup button:hover {
+    background: #e64a19;
+}
+
+
+
+footer {
+    background: #d84315;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Ensures footer takes full width */
+}
+
+.map-container {
+    text-align: center; /* Centers the map container */
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 600px; /* Limits max width of the map */
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Mobile Responsiveness for Footer and Map */
+@media (max-width: 768px) {
+    footer {
+        font-size: 12px; /* Smaller text on mobile */
+        padding: 10px;  /* Adjust padding for mobile */
+    }
+
+    .map-container iframe {
+        height: 250px; /* Smaller map on mobile */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./image/Screenshot_2025-02-24_214840-removebg-preview.png" alt="Bhel Café Logo" class="logo">
+            <h1 style="font-family: 'Teko', sans-serif;">दुर्गा भेळ</h1>
+        </div>
+    </header>
+    
+    
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger Icon -->
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Bhel Café</h1>
+            <p>Delicious Bhel & Pani Puri – Taste the Authenticity!</p>
+            <a href="#menu" class="btn">Explore Our Menu</a>
+        </div>
+    </section>
+    
+    
+
+        <section class="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Our Store</h2>
+                    <p>Welcome to <strong>दुर्गा भेळ</strong>, Welcome to Durga Bhel, where every meal is a journey to the heart of authentic flavours. Nestled in the heart of the city, our cafe is dedicated to serving the finest Bhel and Pani Puri that will transport you to the bustling streets of India.
+
+                    </p><p> At Durga Bhel, we believe in the power of fresh ingredients, traditional recipes and a touch of love to create food that brings people together. Whether you want the spiciness of Pani Puri or the perfect blend of spices in our Bhel, we ensure that each dish is made with the utmost care and passion.
+                        
+                       </p><p> Our story began with a simple dream - to share the joy of India's beloved street food in a comfortable and welcoming environment. Over time, this dream has grown into a place where friends and families come together to celebrate great food, laughter and unforgettable memories.
+                        
+                        Join us at Durga Bhel and experience the magic of authentic Indian street food, prepared just the way you like it. We look forward to serving you!</p>
+                </div>
+                <div class="about-image">
+                    <img src="path-to-your-image.jpg" alt="Café Image" class="image">
+                </div>
+            </div>
+        </section>
+        
+
+    <section class="why-choose-us" >
+        <h2>✨ Why Choose Us? ✨</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>🥗 Fresh Ingredients</h3>
+                <p>We use only the freshest ingredients to ensure the best taste.</p>
+            </div>
+            <div class="feature">
+                <h3>🔑 Secret Recipe</h3>
+                <p>Our bhel and panipuri have a unique taste you won't find anywhere else!</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Fast Service</h3>
+                <p>Your order is prepared fresh within minutes, every time.</p>
+            </div>
+            <div class="feature">
+                <h3>💰 Affordable Prices</h3>
+                <p>Enjoy delicious snacks at pocket-friendly prices.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🎉 Bulk Orders & Catering</h3>
+                <p>Hosting a party? We cater bulk orders for events, birthdays, and celebrations!</p>
+        </div>
+
+    </section>
+    
+
+    <section id="menu" class="menu-container">
+        <h2>Our Special Menu</h2>
+        <div class="menu-buttons">
+            <button onclick="filterMenu('all')">All</button>
+            <button onclick="filterMenu('bhel')">Bhel</button>
+            <button onclick="filterMenu('panipuri')">Panipuri</button>
+            <button onclick="filterMenu('coldcoffee')">Cold Coffee</button>
+            <button onclick="filterMenu('softee')">Softee</button>
+            <button onclick="filterMenu('special')">Special</button>
+        </div>
+    
+        <div class="menu-grid" id="menu-items">
+            <div class="menu-card bhel">
+                <div class="menu-card-inner">
+                    <div class="menu-card-front">
+                        <img src="./image/bhel-removebg-preview.png" alt="Bhel">
+                        <h3>Mumbai Bhel</h3>
+                        <p>₹50</p>
+                    </div>
+                    <div class="menu-card-back">
+                        <p>Spicy and crunchy Mumbai-style bhel.</p>
+                        <span class="best-seller">Best Seller</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="menu-card panipuri">
+                <div class="menu-card-inner">
+                    <div class="menu-card-front">
+                        <img src="panipuri.jpg" alt="Panipuri">
+                        <h3>Panipuri</h3>
+                        <p>₹40</p>
+                    </div>
+                    <div class="menu-card-back">
+                        <p>Served with tangy and spicy water.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="menu-card coldcoffee">
+                <div class="menu-card-inner">
+                    <div class="menu-card-front">
+                        <img src="coldcoffee.jpg" alt="Cold Coffee">
+                        <h3>Cold Coffee</h3>
+                        <p>₹80</p>
+                    </div>
+                    <div class="menu-card-back">
+                        <p>Refreshing and creamy cold coffee.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="menu-card coldcoffee">
+                <div class="menu-card-inner">
+                    <div class="menu-card-front">
+                        <img src="coldcoffee.jpg" alt="Cold Coffee">
+                        <h3>Cold Coffee</h3>
+                        <p>₹80</p>
+                    </div>
+                    <div class="menu-card-back">
+                        <p>Refreshing and creamy cold coffee.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            
+    
+            <!-- Add more menu items here -->
+        </div>
+    </section>
+    
+
+    <section class="popular-items">
+        <h2>🔥 Most Popular Dishes</h2>
+        <div class="item">
+            <img src="./image/bhel-removebg-preview.png" alt="Special Bhel Puri" class="item-image">
+            <h3>🥗 Special Bhel Puri</h3>
+            <p>Crispy, tangy, and full of flavors!</p>
+            <p class="price">₹50</p>
+        </div>
+        <div class="item">
+            <img src="./image/bhel-removebg-preview.png" alt="Masala Panipuri" class="item-image">
+            <h3>🌊 Masala Panipuri</h3>
+            <p>Spicy, crunchy, and oh-so-delicious!</p>
+            <p class="price">₹40</p>
+        </div>
+    </section>
+    
+        
+        <section class="image-gallery">
+            <h2>Our Special Dishes</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./image/360_F_772757975_P88fcOT6bbd1T2WvyXXKbZJ8DUPpa2lU.jpg" alt="Dish 1">
+                    <div class="overlay">
+                        <p>Dish Name</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./image/360_F_772757975_P88fcOT6bbd1T2WvyXXKbZJ8DUPpa2lU.jpg" alt="Dish 2">
+                    <div class="overlay">
+                        <p>Dish Name</p>
+                    </div>
+                </div>
+                <!-- More items here -->
+            </div>
+        </section>
+        
+
+        <section class="reviews">
+            <h2>💬 What Our Customers Say</h2>
+            <div class="review">
+                <p>"Best bhel in town! The taste is so authentic and fresh. Highly recommend!"</p>
+                <h4>- Priya S.</h4>
+            </div>
+            <div class="review">
+                <p>"Crispy, tasty, and hygienic. Loved the experience!"</p>
+                <h4>- Amit R.</h4>
+            </div>
+        </section>
+
+
+        <section class="event">
+            <h2>Upcoming Event</h2>
+            <p>Join us for a special bhel festival! Don't miss out.</p>
+            <div id="countdown"></div>
+        </section>
+        
+
+
+
+
+        <section class="customer-poll">
+            <h2>🤔 Help Us Improve!</h2>
+            <p>Which new snack would you like us to add?</p>
+            <label><input type="radio" name="new-snack"> Cheese Bhel</label>
+            <label><input type="radio" name="new-snack"> Chocolate Panipuri</label>
+            <button onclick="showPopup()">Vote Now</button>
+            
+        </section>
+        
+        
+        <!-- Popup Message -->
+        <div id="votePopup" class="popup">
+            <div class="popup-content">
+                <p>✅ Thank you for your vote! Your feedback helps us improve. 😊</p>
+                <button onclick="closePopup()">OK</button>
+            </div>
+        </div>
+        
+        
+        
+        
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>📍 Pune, India</p>
+            <p>📞 +91 9876543210</p>
+            
+        </section>
+        <section class="find-us">
+            <h2>📍 Find Us</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248.37008071660603!2d76.55835928933827!3d18.406115965453896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1740417503272!5m2!1sen!2sin"
+                width="100%" height="300px" style="border:0;" allowfullscreen="">
+            </iframe>
+        </section>
+        
+    </div>
+    
+
+    <footer>&copy; 2025 Bhel Café. All rights reserved.</footer>
+
+    <script>
+// Hamburger menu toggle for mobile view
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+
+    // Toggle the hamburger icon to a close ('X') icon when menu is open
+    if (navLinks.classList.contains("active")) {
+        hamburger.innerHTML = "&times;"; // Change to "X" when open
+    } else {
+        hamburger.innerHTML = "&#9776;"; // Change back to hamburger when closed
+    }
+});
+
+// Menu filtering logic
+function filterMenu(category) {
+    const menuItems = document.querySelectorAll(".menu-card");
+    if (category === 'all') {
+        menuItems.forEach(item => item.style.display = 'block');
+    } else {
+        menuItems.forEach(item => {
+            if (item.classList.contains(category)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Popup visibility for voting
+function showPopup() {
+    const popup = document.getElementById("votePopup");
+    popup.style.display = "block";  // Show popup
+}
+
+// Close the popup when clicking outside
+window.addEventListener('click', (event) => {
+    const popup = document.getElementById("votePopup");
+    if (event.target === popup) {
+        popup.style.display = "none"; // Close popup
+    }
+});
+
+// Close the popup using the close button
+const closeButton = document.querySelector(".popup button");
+closeButton.addEventListener("click", () => {
+    const popup = document.getElementById("votePopup");
+    popup.style.display = "none";  // Close popup
+});
+
+
+
+
+function countdown() {
+    const eventDate = new Date("March 1, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const timeRemaining = eventDate - now;
+    
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(countdown, 1000);
+
+
+
+
+    </script>
+</body>
+</html>
